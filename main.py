@@ -8,5 +8,21 @@ quiz_questions = [
   {"question": "Who is the current president of the United States?", "answer": "donald trump"},
   {"question": "Which country exited the European Union in 2020?", "answer": "united kingdom"},
   {"question": "What international organization is abbreviated as 'UN'?", "answer": "united nations"}
-
 ]
+
+def run_quiz():
+    score = 0  # start at 0
+
+    for q in quiz_questions:
+        user_answer = input(q["question"] + " ").strip().lower()
+
+        if user_answer == q["answer"]:
+            print("Correct!\n")
+            score += 1
+        else:
+            print(f"Wrong! The correct answer is: {q['answer'].title()}\n")
+
+    print(f"You got {score} out of {len(quiz_questions)} correct.")
+
+# Start the quiz
+run_quiz()
