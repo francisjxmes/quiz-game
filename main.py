@@ -10,6 +10,7 @@ quiz_questions = [
   {"question": "What international organization is abbreviated as 'UN'?", "answer": "united nations"}
 ]
 
+
 def run_quiz():
     score = 0  # start at 0
 
